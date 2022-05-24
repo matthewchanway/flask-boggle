@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+{% block content %}
+
+<div id ="game-container">
+{% for row in gameboard %}
+<div id = "{{row}}" class = "row"></div>
+    {% for i in row %}
+        <span class = "cell">{{i}}</span>
+    {% endfor %}
+    {% endfor %}
+</div>
+<form id ="guess-form">
+    <input type = "text" id="text-guess" name="guess" placeholder ="Enter your guess">
+    <button>Submit Guess</button>
+</form>
+<div id="feedback-container">
+</div>
+<div id="score-container">
+    <h3 id = "score-tally">Score is 0</h3>
+</div>
+
+
+
+
+
+
+
+{% endblock%}
